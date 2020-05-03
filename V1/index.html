@@ -1,28 +1,90 @@
 <!DOCTYPE html>
+<!--
+  CIS WEB DEV 1: Quarter Project V1
+  Author: Landon Kelln
+  Date 5/2/2020
+  Filename: index.html
+-->
 <html>
+  <!--M1LO6 Demonstrate the use of basic HTML tags to create a simple Web page 
+    (HTML, this item should be specified once, describing how the file it is in meets this outcome)
+  [Shows that the html is there and has keyword tags]-->
   <head>
 <meta charset="UTF-8">
 <meta name="keywords" content="Smash, Bros, Ultimate, Help, New, Guide" />
 <title>Smash Bros Ultimate Intro Guide</title>
-<link href="HwstyleSheet.css" rel="stylesheet" />
+<!--M1LO8 Demonstrate the use of external style sheets (HTML, note the external 
+  style sheet must exist and contain CSS)[Shows that the stylesheet I used is linked]-->
+<!--M1LO13 Demonstrate using 3 types of hyperlinks: site navigation, targeted 
+  location using ids, and external (HTML, this item should be specified 3 times, once on each type of link)
+[This is the external link]-->
+<link href="styles.css" rel="stylesheet" />
+<!--M2LO4 Demonstrate external, embedded, and inline styles (HTML, this item should be specified 2 times, once each 
+  for embedded and inline styles; note external was taken care of with M1LO8; see 2-3b Embedded Style Sheets, and 2-3c Inline Styles)
+[This is the embedded style since it sets the style for this pages header]-->
+<style>
+  h1{
+    text-align:center
+  }
+</style>
+<!--M2LO4 Demonstrate external, embedded, and inline styles (HTML, this item should be specified 2 times, once each 
+  for embedded and inline styles; note external was taken care of with M1LO8; see 2-3b Embedded Style Sheets, and 2-3c Inline Styles)
+[This is the inline style since it takes the embedded style and chooses the "Home" text for it]-->
+<h1 style="text-align: center;">
+Home</h1>
   </head>
-</html>
 <body>
-<!-- Stuff goes here -->
 <header>
+  <!--M1LO12 Create navigation using unordered lists (HTML)[The list isn't ordered for nav]-->
+  <!--M1LO13 Demonstrate using 3 types of hyperlinks: site navigation, targeted 
+    location using ids, and external (HTML, this item should be specified 3 times, once on each type of link)
+  [This is for site navigation since it links to the other pages]-->
   <nav>
-<ul>
-<li><a href="">Home</a></li>
-<li><a href="">Characters</a></li>
-<li><a href="">Guides</a></li>
+    <div id="nav">
+      <div class="table">
+        <ul id="horizontal-list">
+<li><a href="index.html">Home</a></li>
+<li><a href="characters.html">Characters</a></li>
+<li><a href="guides.html">Guides</a></li>
+<li><a href="about.html">About</a></li>
 </ul>
+</div>
+    </div>
   </nav>
 </header>
-<article>
-<ol>
 
+<article>
+  <!--M1LO10 Demonstrate the use of special characters from extended 
+    character sets (HTML, use entities, not cut-and-pasted unicode characters)
+    [adds the trademark symbol to the game's title-->
+  <h1 id="top">Hello! This is the Smash Bros. Ultimate&reg; Intro Guide </h1>
+  <!--M1LO9 Demonstrate the use of inline images (HTML)
+  adds the smash bros. roster banner]-->
+  <img src="SmashBanner.jpg" />
+
+<p>The competitive scene of this game can be a little daunting, especially if you're 
+  new to this game. Essentially, this site is a guide that's menat to help players,
+   both new and experienced, find what character may fit there playstyle best and provide
+    guides to help players get the most out of their character</p>
+<p>This site is going to be split into 4 parts
+<!--M1LO7 Demonstrate the use of ordered lists (HTML)
+[An ordered list to describe the site's purpose better]-->
+<ol>
+<li>The Home page (Where you are now)</li>
+<li>The Character page (Which describes the different playstyles and traits of each fighter)</li>
+<li>The Guides (This is a page filled with tutorials on each character)</li>
+<li>About Page (Just describes the goal of this site)</li>
 
 </ol>
+</p>
+<p>If you're a new player then I reccomend starting from the Character page so you can get 
+  a good idea on who you may want to try out before moving onto the guide page. With that said, let's get started.</p>
 </article>
+<footer>
+  <!--M1LO13 Demonstrate using 3 types of hyperlinks: site navigation, targeted location using ids, and external
+     (HTML, this item should be specified 3 times, once on each type of link)
+    [targeted location using ids that can take the user to the top of the page if link is clicked]-->
+  Click here to return to the <a href='#top'>top</a> of the page
+</footer>
 </body>
 </html>

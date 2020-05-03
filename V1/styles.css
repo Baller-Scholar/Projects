@@ -1,0 +1,135 @@
+@charset "utf-8";
+@font-face {
+ font-family: impact;
+ src: url(impactreg.woff) format('woff'),
+ url(impactreg.ttf) format('ttf');
+}
+ 
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 2
+   Case Problem 1
+   
+   PHCT Typographic Style Sheet
+   Author:Landon Kelln 
+   Date:4/27/2020   
+   
+   Filename: ph_styles.css
+
+*/
+/*M2LO7 Demonstrate a CSS attribute selector other than class or id 
+(CSS, specify 1 time, see 2-9b Attribute selectors)[the html is an attribute
+selector]*/
+/*M2LO12 Demonstrate how CSS can change presentation of page elements 
+(CSS, these are styles that impact page elements rather than impacting 
+text on the page)[this changed the color of the background page]*/
+/*M2LO14 Demonstrate and explain the use of progressive enhancement in 
+CSS (CSS, see 2-6 Employing Progressive Enhancement)[has both old and new
+color support]*/
+html{
+ background-color: hsl(170, 79%, 45%);
+ background-color: rgba(24, 205, 175, 1);
+}
+ /*M2LO15 Apply colors using CSS (CSS, see 2-5 Working with Color in CSS)[I have
+ an orangish color applied to the body's background]*/
+ /*M2LO3 Demonstrate style precedence and inheritance in CSS (CSS, this item 
+ should be specified 2 times, once where precedence is applied and once where inheritance 
+ is applied; see 2-3d Style Specificity and Precedence, and 2-3e Style Inheritance)[This is 
+ precedence since it holds what it gets applied to within itself]*/
+body{
+ background-color: hsl(14, 72%, 62%); 
+}
+/*M2LO3 Demonstrate style precedence and inheritance in CSS (CSS, this item 
+ should be specified 2 times, once where precedence is applied and once where inheritance 
+ is applied; see 2-3d Style Specificity and Precedence, and 2-3e Style Inheritance)[This is
+ inheritance since the color from the body is applied here]*/
+p{
+margin:0px;
+padding:5px 25px 25px 25px;
+
+
+}
+/*M2LO11 Demonstrate a pseudo-classes and a 
+pseudo-element selector (CSS, specify 2 times, 
+show one pseudo-class and one pseudo-element, see 2-18 
+Using Pseudo-Classes and Pseudo-Elements)[this is a pseudo-element that
+makes the first letter at the start of each paragraph bigger]*/
+p::first-letter{
+font-size: 2em;    
+}
+/*M2LO13 Demonstrate how CSS can change presentation of textual 
+elements (CSS, these are styles that impact text that is rendered
+ on the page)[altered the format of the body text]*/
+body > p{
+text-align:center;
+font-size: 2em 
+
+}
+ol{
+    color: rgba(134, 12, 128, 0.75)
+
+}
+footer{
+    color: rgba(134, 12, 128, 0.75)
+}
+/*M2LO11 Demonstrate a pseudo-classes and a 
+pseudo-element selector (CSS, specify 2 times, 
+show one pseudo-class and one pseudo-element, see 2-18 
+Using Pseudo-Classes and Pseudo-Elements)[pseudo class that makes changes to
+the footer when it's veiwed]*/
+ /*M2LO5 Demonstrate contextual selectors (CSS, specify 2 times, showing
+  two different types of contextual selectors as shown in Figure 2-12, Contextual 
+  Selectors, of the textbook)[makes an indentation in the footer]*/
+footer:first-child{
+    font-size: small;
+    text-indent: 20em;
+}
+
+ /*M2LO5 Demonstrate contextual selectors (CSS, specify 2 times, showing
+  two different types of contextual selectors as shown in Figure 2-12, Contextual 
+  Selectors, of the textbook)[alters spacing in the header]*/
+header{
+ background-color: hsla(189, 96%, 34%, 1.0);
+ letter-spacing: 0.1em;
+}
+/*M2LO6  Demonstrate a CSS id and a CSS class selector (CSS, specify 2 times, 
+show a use of id and a use of class, see 2-9b Attribute selectors)[addresses links
+in the header (id) to be changed format wise and appear horizontal in list]*/
+#nav {
+	height: 84px;
+	background: url(images/bar-bg.jpg) repeat-x;
+}
+/*M2LO6  Demonstrate a CSS id and a CSS class selector (CSS, specify 2 times, 
+show a use of id and a use of class, see 2-9b Attribute selectors) [Is the class
+aspect that helps the formating of the nav]*/
+.table {
+	display: table;
+	margin: 0 auto;
+}
+
+ul#horizontal-list {
+	min-width: 696px;
+	list-style: none;
+	padding-top: 20px;
+	}
+	ul#horizontal-list li {
+		display: inline;
+	}
+nav a{
+padding-top: 10px;
+padding-bottom: 10px;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+nav a:link, nav:visited{
+color: white;
+text-decoration: none;
+background-color: hsla(43, 96%, 48%, 1.0);
+}
+nav a:hover, nav a:active{
+color: hsla(189, 96%, 34%, 1.0);
+background-color: hsla(10, 77%, 50%, .75);
+
+}
+
+
+
