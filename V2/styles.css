@@ -15,17 +15,31 @@
    Filename: ph_styles.css
 
 */
+/*M4LO2 Demonstrate the use of background images (CSS)*/
 html{
- background-color: hsl(170, 79%, 45%);
- background-color: rgba(24, 205, 175, 1);
+ /*background-color: hsl(170, 79%, 45%);
+ background-color: rgba(24, 205, 175, 1);*/
+ background-image: url("KingDedede.png");
+ background-repeat: repeat;
 }
+/*M4LO3 Demonstrate the use of rounded corners for borders (CSS)*/
+/*M4LO4 Demonstrate the use of gradients (CSS)*/
 body{
- background-color: hsl(14, 72%, 62%); 
+ /*background-color: hsl(14, 72%, 62%);*/ 
+ background-image: linear-gradient(to right, rgba(255,0,0,1), rgba(255,0,0,0));
+ border: groove 1em pink;
+ border-radius: 1em;
+ 
 }
+/*M3LO10 Demonstrate an overflow setting (CSS, note explicit 
+use of an overflow setting in your CSS and what the impact 
+is on the HTML) This sets a consistent looking body but ensures that
+any overflowing text won't be cut off.*/
 p{
 margin:0px;
 padding:5px 25px 25px 25px;
-
+width: 35em;
+overflow: visible;
 
 }
 p::first-letter{
@@ -34,45 +48,103 @@ font-size: 2em;
 body > p{
 text-align:center;
 font-size: 2em 
-
 }
+/*M4LO5 Demonstrate the use of text or box shadowing 
+(CSS, note one of these two in your CSS and explain 
+its impact on the HTML) Puts a shadow effect on the 
+ordered list to make it "pop" more*/
 ol{
-    color: rgba(134, 12, 128, 0.75)
-
+	text-shadow: 2px 2px 4px #000000;
+	color: rgba(251, 255, 0, 0.945)
 }
+/*M3LO8A Demonstrate absolute positioning
+ (CSS, note use in your CSS and describe what 
+ its impact is on the HTML) This makes the footer always at
+ the bottom of the page so the "top" link can alwasy be accessed*/
 footer{
-    color: rgba(134, 12, 128, 0.75)
+	position: absolute;
+	bottom: 15px;
+	color: rgba(134, 12, 128, 0.75)
+	
 }
 
 footer:first-child{
     font-size: small;
-    text-indent: 20em;
+	text-indent: 20em;
 }
 
 header{
- background-color: hsla(189, 96%, 34%, 1.0);
+ background-color: rgb(59, 208, 231);
  letter-spacing: 0.1em;
+ 
 }
-
+/*M3LO2 Demonstrate floating elements (CSS, note where 
+you have specified a floating element and what its impact is)
+This is the logo image and it moves is to the right*/
+/*M3LO3 Demonstrate a clearing floats (CSS, note where you have
+ used a clear and what its impact is) This is so that nothing goes past
+ the logo when the page is resized*/
+/*M3LO8B Demonstrate relative positioning (CSS, note use in your
+  CSS and describe what its impact is on the HTML) It moves the logo
+  to an area near the top right*/
+  /*M3LO11 Demonstrate -prefix- style browser extensions use in CSS
+   (CSS note the use in your CSS and what the purpose is) Lets a 
+   shadow appear on the smah logo*/
+.table img{
+	position: relative;
+	top: -30px;
+	right: -200px;
+	float:right;
+	border-radius: 4px;
+	padding: 5px;
+	width: 150px;
+	-webkit-filter: drop-shadow(2px 2px 4px black);
+	filter: drop-shadow(2px 2px 4px black);
+	clear: right
+	
+}
+/*M4LO8 Demonstrate the use of transformations for 2D or 3D images
+ (CSS, note one of these two in your CSS and explain
+  its impact on the HTML) This is a 2d reflection of the roster img*/
+img:first-child{
+	-webkit-transform: rotateY(180deg);
+ transform: rotateY(180deg);
+}
 #nav {
 	height: 84px;
 	background: url(images/bar-bg.jpg) repeat-x;
+	
 }
-
+/*M3LO6 Demonstrate formatting a grid (CSS, note the CSS rules 
+that do this and what their impact is on the HTML; this can be 
+old div-class based grids, or new CSS3 grids) This places the nav in a grid 
+and which acts as hyperlinks*/
 .table {
 	display: table;
 	margin: 0 auto;
+	
 }
-
+/*M3LO9 Demonstrate fixed, static, or inherited positioning (CSS, note explicit
+ use of one of the three in your CSS and what the impact is on the HTML)
+ This is a fixed postition that shows the nav as the page scrolls*/
+ /*M4LO6 Demonstrate the use of opacity/transparency for images (see 4.2) (CSS)*/
 ul#horizontal-list {
+	opacity: 0.5;
 	min-width: 696px;
 	list-style: none;
 	padding-top: 20px;
+	position: fixed;
+	left: 20px
+	}
+	ul#horizontal-list:hover {
+		opacity: 1.0;
 	}
 	ul#horizontal-list li {
 		display: inline;
+		
 	}
 nav a{
+	
 padding-top: 10px;
 padding-bottom: 10px;
 font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -87,6 +159,60 @@ color: hsla(189, 96%, 34%, 1.0);
 background-color: hsla(10, 77%, 50%, .75);
 
 }
+/*M3LO1 Demonstrate the use of a CSS reset style sheet (CSS, note
+ where you have CSS reset rules)I tried looking up what a css reset was 
+ and this was the seemed to be the universal answer to that, but I don't 
+ undestand the point of it because it just resets what changes I wanted. 
+ So I have it here to prove that it's here, but I'm not letting it affect the 
+ site.*/
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/*html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+/*article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}*/
 
 
