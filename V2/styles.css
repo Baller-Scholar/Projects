@@ -6,24 +6,22 @@
 }
  
 /*
-  CIS WEB DEV 1: Quarter Project V2
+  CIS WEB DEV 1: Quarter Project V3
    
    PHCT Typographic Style Sheet
    Author:Landon Kelln 
-   Date:5/13/2020   
+   Date:5/29/2020   
    
    Filename: ph_styles.css
 
 */
-/*M4LO2 Demonstrate the use of background images (CSS)*/
 html{
  /*background-color: hsl(170, 79%, 45%);
  background-color: rgba(24, 205, 175, 1);*/
  background-image: url("KingDedede.png");
  background-repeat: repeat;
 }
-/*M4LO3 Demonstrate the use of rounded corners for borders (CSS)*/
-/*M4LO4 Demonstrate the use of gradients (CSS)*/
+
 body{
  /*background-color: hsl(14, 72%, 62%);*/ 
  background-image: linear-gradient(to right, rgba(255,0,0,1), rgba(255,0,0,0));
@@ -31,10 +29,7 @@ body{
  border-radius: 1em;
  
 }
-/*M3LO10 Demonstrate an overflow setting (CSS, note explicit 
-use of an overflow setting in your CSS and what the impact 
-is on the HTML) This sets a consistent looking body but ensures that
-any overflowing text won't be cut off.*/
+
 p{
 margin:0px;
 padding:5px 25px 25px 25px;
@@ -49,18 +44,12 @@ body > p{
 text-align:center;
 font-size: 2em 
 }
-/*M4LO5 Demonstrate the use of text or box shadowing 
-(CSS, note one of these two in your CSS and explain 
-its impact on the HTML) Puts a shadow effect on the 
-ordered list to make it "pop" more*/
+
 ol{
 	text-shadow: 2px 2px 4px #000000;
 	color: rgba(251, 255, 0, 0.945)
 }
-/*M3LO8A Demonstrate absolute positioning
- (CSS, note use in your CSS and describe what 
- its impact is on the HTML) This makes the footer always at
- the bottom of the page so the "top" link can alwasy be accessed*/
+
 footer{
 	position: absolute;
 	bottom: 15px;
@@ -78,18 +67,7 @@ header{
  letter-spacing: 0.1em;
  
 }
-/*M3LO2 Demonstrate floating elements (CSS, note where 
-you have specified a floating element and what its impact is)
-This is the logo image and it moves is to the right*/
-/*M3LO3 Demonstrate a clearing floats (CSS, note where you have
- used a clear and what its impact is) This is so that nothing goes past
- the logo when the page is resized*/
-/*M3LO8B Demonstrate relative positioning (CSS, note use in your
-  CSS and describe what its impact is on the HTML) It moves the logo
-  to an area near the top right*/
-  /*M3LO11 Demonstrate -prefix- style browser extensions use in CSS
-   (CSS note the use in your CSS and what the purpose is) Lets a 
-   shadow appear on the smah logo*/
+
 .table img{
 	position: relative;
 	top: -30px;
@@ -103,9 +81,7 @@ This is the logo image and it moves is to the right*/
 	clear: right
 	
 }
-/*M4LO8 Demonstrate the use of transformations for 2D or 3D images
- (CSS, note one of these two in your CSS and explain
-  its impact on the HTML) This is a 2d reflection of the roster img*/
+
 img:first-child{
 	-webkit-transform: rotateY(180deg);
  transform: rotateY(180deg);
@@ -115,19 +91,13 @@ img:first-child{
 	background: url(images/bar-bg.jpg) repeat-x;
 	
 }
-/*M3LO6 Demonstrate formatting a grid (CSS, note the CSS rules 
-that do this and what their impact is on the HTML; this can be 
-old div-class based grids, or new CSS3 grids) This places the nav in a grid 
-and which acts as hyperlinks*/
+
 .table {
 	display: table;
 	margin: 0 auto;
 	
 }
-/*M3LO9 Demonstrate fixed, static, or inherited positioning (CSS, note explicit
- use of one of the three in your CSS and what the impact is on the HTML)
- This is a fixed postition that shows the nav as the page scrolls*/
- /*M4LO6 Demonstrate the use of opacity/transparency for images (see 4.2) (CSS)*/
+
 ul#horizontal-list {
 	opacity: 0.5;
 	min-width: 696px;
@@ -159,12 +129,7 @@ color: hsla(189, 96%, 34%, 1.0);
 background-color: hsla(10, 77%, 50%, .75);
 
 }
-/*M3LO1 Demonstrate the use of a CSS reset style sheet (CSS, note
- where you have CSS reset rules)I tried looking up what a css reset was 
- and this was the seemed to be the universal answer to that, but I don't 
- undestand the point of it because it just resets what changes I wanted. 
- So I have it here to prove that it's here, but I'm not letting it affect the 
- site.*/
+
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
