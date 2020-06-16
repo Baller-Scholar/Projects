@@ -244,7 +244,6 @@ audio {
 iframe {
 	display: block;
 	width: 50%;
-	position: center;
 	margin: 5px auto;
 	transition: width 2s, height 4s;
 	}
